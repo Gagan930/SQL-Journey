@@ -20,6 +20,9 @@ INSERT INTO top_students (name, class, age) VALUES
 ("Simran", "8th", 16),
 ("Yash", "9th", 15);
 
+insert into top_students (name,class,age) values
+("Raju","11th",NULL);
+
 -- Using IN with a Subquery
 -- Find students whose age matches the average age (which is 18) of students from another table (e.g., top_students).
 
@@ -28,3 +31,9 @@ where age in (select avg(age) from top_students);
 
 -- print students who are not in class 4th 5th 6th
 select name,class from students where class not in ("4th","5th","6th");
+
+-- we can also retrieve data where data is null
+select * from top_students where age is NULL;
+
+
+
